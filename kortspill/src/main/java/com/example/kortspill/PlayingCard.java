@@ -8,10 +8,10 @@ public class PlayingCard {
 
     public PlayingCard(char suit, int face) {
         if (suit != 'S' && suit != 'H' && suit != 'D' && suit != 'C') {
-            throw new IllegalArgumentException("Ugyldig kortfarge: " + suit);
+            throw new IllegalArgumentException("Invalid card suit: " + suit);
         }
         if (face < 1 || face > 13) {
-            throw new IllegalArgumentException("Kortverdi må være mellom 1 og 13");
+            throw new IllegalArgumentException("Card value must be between 1 and 13");
         }
         this.suit = suit;
         this.face = face;

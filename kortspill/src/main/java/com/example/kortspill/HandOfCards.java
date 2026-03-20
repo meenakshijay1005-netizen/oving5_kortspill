@@ -9,7 +9,7 @@ public class HandOfCards {
 
     public HandOfCards(List<PlayingCard> cards) {
         if (cards == null || cards.size() < 5) {
-            throw new IllegalArgumentException("Hånda må inneholde minst 5 kort");
+            throw new IllegalArgumentException("The hand must contain at least 5 cards.");
 }
         this.cards = List.copyOf(cards);
     }

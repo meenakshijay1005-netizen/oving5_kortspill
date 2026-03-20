@@ -29,7 +29,7 @@ public class DeckOfCards {
 
     public HandOfCards dealHand(int n) {
         if (n < 1 || n > deck.size()) {
-            throw new IllegalArgumentException("n må være mellom 1 og " + deck.size());
+            throw new IllegalArgumentException("n must be between 1 and " + deck.size());
         }
 
         List<PlayingCard> tempDeck = new ArrayList<>(deck);

@@ -16,7 +16,7 @@ public class CardGameApp extends Application {
     private final DeckOfCards deck = new DeckOfCards();
     private HandOfCards currentHand;
 
-    private final Label handLabel = new Label("Ingen hånd delt ut ennå");
+    private final Label handLabel = new Label("No hand dealt yet");
 
     private final TextField sumField = new TextField();
     private final TextField heartsField = new TextField();
@@ -74,7 +74,7 @@ public class CardGameApp extends Application {
 
     private void checkHand() {
         if (currentHand == null) {
-            handLabel.setText("Du må dele ut en hånd først");
+            handLabel.setText("You have to deal a hand first");
             return;
         }
 

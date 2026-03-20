@@ -48,7 +48,6 @@ public class CardGameApp extends Application {
         HBox row4 = new HBox(10, new Label("Flush:"), flushField);
 
         VBox bottomBox = new VBox(10, row1, row2, row3, row4);
-        bottomBox.setPadding(new Insets(20));
 
         BorderPane root = new BorderPane();
         root.setCenter(centerBox);

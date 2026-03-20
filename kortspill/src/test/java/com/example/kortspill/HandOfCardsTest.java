@@ -11,11 +11,11 @@ class HandOfCardsTest {
     @Test
     void sumOfFacesShouldReturnCorrectSum() {
         HandOfCards hand = new HandOfCards(List.of(
-                new PlayingCard('H', 1),
-                new PlayingCard('S', 5),
-                new PlayingCard('D', 10),
-                new PlayingCard('C', 3),
-                new PlayingCard('H', 12)
+            new PlayingCard('H', 1),
+            new PlayingCard('S', 5),
+            new PlayingCard('D', 10),
+            new PlayingCard('C', 3),
+            new PlayingCard('H', 12)
         ));
 
         assertEquals(31, hand.sumOfFaces());
@@ -24,11 +24,11 @@ class HandOfCardsTest {
     @Test
     void heartsAsStringShouldReturnOnlyHearts() {
         HandOfCards hand = new HandOfCards(List.of(
-                new PlayingCard('H', 12),
-                new PlayingCard('S', 5),
-                new PlayingCard('H', 1),
-                new PlayingCard('C', 3),
-                new PlayingCard('D', 9)
+            new PlayingCard('H', 1),
+            new PlayingCard('S', 5),
+            new PlayingCard('D', 10),
+            new PlayingCard('C', 3),
+            new PlayingCard('H', 12)
         ));
 
         assertEquals("H12 H1", hand.heartsAsString());
@@ -37,11 +37,11 @@ class HandOfCardsTest {
     @Test
     void heartsAsStringShouldReturnNoHeartsWhenNoneExist() {
         HandOfCards hand = new HandOfCards(List.of(
-                new PlayingCard('S', 12),
-                new PlayingCard('S', 5),
-                new PlayingCard('D', 1),
-                new PlayingCard('C', 3),
-                new PlayingCard('D', 9)
+            new PlayingCard('S', 12),
+            new PlayingCard('S', 5),
+            new PlayingCard('D', 1),
+            new PlayingCard('C', 3),
+            new PlayingCard('D', 9)
         ));
 
         assertEquals("No Hearts", hand.heartsAsString());
@@ -50,11 +50,11 @@ class HandOfCardsTest {
     @Test
     void containsQueenOfSpadesShouldReturnTrueWhenPresent() {
         HandOfCards hand = new HandOfCards(List.of(
-                new PlayingCard('S', 12),
-                new PlayingCard('H', 5),
-                new PlayingCard('D', 7),
-                new PlayingCard('C', 9),
-                new PlayingCard('H', 3)
+            new PlayingCard('S', 12),
+            new PlayingCard('H', 5),
+            new PlayingCard('D', 7),
+            new PlayingCard('C', 9),
+            new PlayingCard('H', 3)
         ));
 
         assertTrue(hand.containsQueenOfSpades());
@@ -63,11 +63,11 @@ class HandOfCardsTest {
     @Test
     void containsQueenOfSpadesShouldReturnFalseWhenNotPresent() {
         HandOfCards hand = new HandOfCards(List.of(
-                new PlayingCard('S', 11),
-                new PlayingCard('H', 5),
-                new PlayingCard('D', 7),
-                new PlayingCard('C', 9),
-                new PlayingCard('H', 3)
+            new PlayingCard('S', 11),
+            new PlayingCard('H', 5),
+            new PlayingCard('D', 7),
+            new PlayingCard('C', 9),
+            new PlayingCard('H', 3)
         ));
 
         assertFalse(hand.containsQueenOfSpades());
@@ -76,11 +76,11 @@ class HandOfCardsTest {
     @Test
     void isFlushShouldReturnTrueForFiveCardsSameSuit() {
         HandOfCards hand = new HandOfCards(List.of(
-                new PlayingCard('H', 1),
-                new PlayingCard('H', 2),
-                new PlayingCard('H', 3),
-                new PlayingCard('H', 4),
-                new PlayingCard('H', 5)
+            new PlayingCard('H', 1),
+            new PlayingCard('H', 2),
+            new PlayingCard('H', 3),
+            new PlayingCard('H', 4),
+            new PlayingCard('H', 5)
         ));
 
         assertTrue(hand.isFlush());
@@ -89,11 +89,11 @@ class HandOfCardsTest {
     @Test
     void isFlushShouldReturnFalseWhenNoFlushExists() {
         HandOfCards hand = new HandOfCards(List.of(
-                new PlayingCard('H', 1),
-                new PlayingCard('S', 2),
-                new PlayingCard('D', 3),
-                new PlayingCard('C', 4),
-                new PlayingCard('H', 5)
+            new PlayingCard('H', 1),
+            new PlayingCard('S', 2),
+            new PlayingCard('D', 3),
+            new PlayingCard('C', 4),
+            new PlayingCard('H', 5)
         ));
 
         assertFalse(hand.isFlush());
